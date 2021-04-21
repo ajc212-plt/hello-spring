@@ -1,10 +1,12 @@
 package hello.hellospring.repository;
 
 import hello.hellospring.domain.Member;
+import org.springframework.stereotype.Repository;
 
 import java.sql.Array;
 import java.util.*;
 //Test는 각 매서드마다 의존관계 없이 실행이 되어야함. 저장소나 공용데이터를 지워주는 작업도 해야한다.
+
 public class MemoryMemberRepository implements MemberRepository{
 
     private static Map<Long, Member> store = new HashMap<>();
